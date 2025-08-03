@@ -6,8 +6,12 @@ function loadTasks() {
 
 // Add a new task
 function addTask(taskText, save = true) {
+
     const taskList = document.getElementById('taskList');
-    const li = document.createElement('li');
+const taskInput =
+document.getElementById ('taskInput')
+
+   const li = document.createElement('li');
     li.textContent = taskText;
 
     // Delete button
@@ -39,7 +43,7 @@ function removeTaskFromStorage(taskText) {
 
 // Event listener for adding a task
 document.getElementById('addButton').addEventListener('click', () => {
-    const input = document.getElementById('taskInput');
+    const taskInput  = document.getElementById('taskInput');
     if (input.value.trim() !== '') {
         addTask(input.value.trim());
         input.value = '';
