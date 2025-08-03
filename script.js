@@ -13,5 +13,5 @@ function addTask(taskText, saveToLocalStorage = true) {
         storedTask.push(taskText);
         localStorage.setItem('task', JSON.stringify(storedTask));
     }
-}
 document.addEventListener('DOMContentLoaded', () => { loadTask(); });
+}
